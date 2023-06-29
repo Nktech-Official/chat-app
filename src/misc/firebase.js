@@ -1,9 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: 'AIzaSyAQURDY2Slc5ke5oEIMwM7y2extY96lsnU',
   authDomain: 'chat-app-nktech.firebaseapp.com',
@@ -15,6 +13,6 @@ const firebaseConfig = {
   appId: '1:291794369522:web:757d4f74877eb8fd4e096b',
 };
 
-// Initialize Firebase
-// eslint-disable-next-line no-unused-vars
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
+export const auth = app.auth();
+export const database = app.database();
